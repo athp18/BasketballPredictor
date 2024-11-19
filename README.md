@@ -1,0 +1,1 @@
+PyTorch implementation of [Applying Deep Learning to Basketball Trajectories](https://arxiv.org/abs/1608.03793)
