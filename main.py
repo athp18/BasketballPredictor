@@ -18,7 +18,6 @@ from dataclasses import dataclass
 import time
 from pathlib import Path
 
-# Import our converted utilities (assuming previous conversions)
 from dataloader import BasketballDataLoader
 from model import BasketballMDNWithLoss, MDNConfig
 from util_basket import plot_basket
@@ -90,8 +89,13 @@ def train_basketball_model(
     
     # Performance tracking
     perf_collect = {
-        'train_acc': [], 'train_cost': [], 'train_seq_cost': [],
-        'val_acc': [], 'val_cost': [], 'val_seq_cost': [], 'val_auc': []
+        'train_acc': [], 
+        'train_cost': [], 
+        'train_seq_cost': [],
+        'val_acc': [], 
+        'val_cost': [], 
+        'val_seq_cost': [], 
+        'val_auc': []
     }
     
     # Early stopping setup
@@ -260,7 +264,6 @@ def train_basketball_model(
     return model, perf_collect
 
 if __name__ == "__main__":
-    # Set random seeds for reproducibility
     torch.manual_seed(42)
     np.random.seed(42)
     
